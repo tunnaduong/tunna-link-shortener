@@ -18,7 +18,6 @@ h1 {
 <center>
     <img src="./logo.png" style="height: 60px">
     <?php
-	header('Content-type: text/plain; charset=utf-8');
 	// connect to database
 	$conn = mysqli_connect("localhost", "tunnaduong_link", "Tunganh2003", "tunnaduong_link");
 	// check connection
