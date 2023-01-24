@@ -218,7 +218,7 @@ h1 {
 				$url = $row['next_url'];
 		?>
     <script>
-    document.title = "<?php $row['link_title']  ?> | Tunna™ Link Shortener PROVIP®";
+    document.title = "<?php echo $row['link_title']  ?> | Tunna™ Link Shortener PROVIP®";
     </script>
     <h1 id='wait'>Đợi chút xíu tầm <span id='sec'>6</span> giây thôi bạn nhé!!!<br>┗(^o^　)┓三</h1>
     Đang chuyển hướng đến đường dẫn được chia sẻ... // Redirecting to content, please wait a second...<br><br>
