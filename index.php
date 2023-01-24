@@ -1,6 +1,7 @@
 <head>
     <title>Tunna™ Link Shortener PROVIP®</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/tunnaduong.png" type="image/png">
 </head>
 <style>
 h1 {
@@ -216,6 +217,9 @@ h1 {
 				$row = mysqli_fetch_assoc($result);
 				$url = $row['next_url'];
 		?>
+    <script>
+    document.title = "<?php $row['link_title']  ?> | Tunna™ Link Shortener PROVIP®";
+    </script>
     <h1 id='wait'>Đợi chút xíu tầm <span id='sec'>6</span> giây thôi bạn nhé!!!<br>┗(^o^　)┓三</h1>
     Đang chuyển hướng đến đường dẫn được chia sẻ... // Redirecting to content, please wait a second...<br><br>
 
