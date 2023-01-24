@@ -225,7 +225,7 @@ h1 {
 							} else {
 								echo "tel:+84376953283";
 							}
-							?>' style='max-width: 100vw;max-height: 600px;width: 100%;height: 100%;zoom: 0.7;diplay: block'>
+							?>' style='max-width: 100vw;max-height: 600px;width: 100%;height: 100%;zoom: 0.7;display: block'>
         <img class='ads' src='<?php
 											if (isset($row['ads_img_url'])) {
 												echo $row['ads_img_url'];
