@@ -20,6 +20,7 @@ h1 {
     <?php
 	// connect to database
 	$conn = mysqli_connect("localhost", "tunnaduong_link", "Tunganh2003", "tunnaduong_link");
+	mysqli_set_charset($conn, "utf8");
 	// check connection
 	if (!$conn) {
 		die("Connection failed: " . mysqli_connect_error());
