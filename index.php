@@ -2,6 +2,7 @@
     <title>Tunna™ Link Shortener PROVIP®</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="/tunnaduong.png" type="image/png">
+    <meta charset="UTF-8">
 </head>
 <style>
 h1 {
@@ -17,6 +18,7 @@ h1 {
 <center>
     <img src="./logo.png" style="height: 60px">
     <?php
+	header('Content-type: text/plain; charset=utf-8');
 	// connect to database
 	$conn = mysqli_connect("localhost", "tunnaduong_link", "Tunganh2003", "tunnaduong_link");
 	// check connection
