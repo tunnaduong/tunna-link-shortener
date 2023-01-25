@@ -238,7 +238,7 @@ h1 {
 											} else {
 												echo "./ads_for_lease.jpg";
 											}
-											?>' style="height: 600px">
+											?>' style="height: 600px;border: 1px solid black;border-radius: 10px;">
     </a>
     <p>--------- Được tài trợ bởi: <?php
 												if (isset($row['ads_promoted_by']) && !empty($row['ads_promoted_by'])) {
