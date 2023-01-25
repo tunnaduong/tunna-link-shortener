@@ -241,7 +241,7 @@ h1 {
 											?>' style="height: 600px">
     </a>
     <p>--------- Được tài trợ bởi: <?php
-												if (isset($row['ads_promoted_by'])) {
+												if (isset($row['ads_promoted_by']) && !empty($row['ads_promoted_by'])) {
 													echo $row['ads_promoted_by'];
 												} else {
 													echo "tunnaAds";
