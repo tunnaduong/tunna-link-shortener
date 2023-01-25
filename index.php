@@ -226,14 +226,14 @@ h1 {
     Đang chuyển hướng đến đường dẫn được chia sẻ... // Redirecting to content, please wait a second...<br><br>
 
     <a href='<?php
-							if (isset($row['ads_click_url'])) {
+							if (isset($row['ads_click_url']) && !empty($row['ads_click_url'])) {
 								echo $row['ads_click_url'];
 							} else {
 								echo "tel:+84376953283";
 							}
 							?>' style='zoom: 0.7;display: block'>
         <img class='ads' src='<?php
-											if (isset($row['ads_img_url'])) {
+											if (isset($row['ads_img_url']) && !empty($row['ads_img_url'])) {
 												echo $row['ads_img_url'];
 											} else {
 												echo "./ads_for_lease.jpg";
