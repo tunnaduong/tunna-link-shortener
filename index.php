@@ -37,9 +37,12 @@ h1 {
     // Check if user came from in-app browsers like Facebook app...
     // Check if url contains fbclid then remove it immediately
     // ...
-
-    if (/^\?fbclid=/.test(location.search))
+      
+    var is_fb_flag = false;
+    if (/^\?fbclid=/.test(location.search)) {
+      	is_fb_flag = true;
         location.replace(location.href.replace(/\?fbclid.+/, ""));
+    }
     // ---
     if (typeof(window.screen.width) != 'undefined') {
         var width = window.screen.width;
@@ -48,7 +51,7 @@ h1 {
         var url = window.location.href;
         url += '&size=' + size;
         // get ref url
-        var ref_url = document.referrer ? document.referrer : "New tab";
+        var ref_url = document.referrer ? document.referrer : is_fb_flag === true ? "Facebook Click ID" : "New tab";
         url += '&ref=' + encodeURIComponent(ref_url);
         // if url contain ? then remove it
         if (url.indexOf('?') != -1) {
@@ -57,6 +60,7 @@ h1 {
         // replace https://tunnal.ink with base url plus index.php?code= and the other params
         url = url.replace('https://tunnal.ink/', 'https://tunnal.ink/?code=');
         window.location.href = url;
+      window.history.replaceState(null, null, 'https://tunnal.ink/');
     }
     </script>
     <?php
@@ -229,14 +233,14 @@ h1 {
 							if (isset($row['ads_click_url']) && !empty($row['ads_click_url'])) {
 								echo $row['ads_click_url'];
 							} else {
-								echo "tel:+84376953283";
+								echo "http://tunnal.ink/?code=ditmetho.ngu&ref=ads_click";
 							}
 							?>' style='zoom: 0.7;display: block'>
         <img class='ads' src='<?php
 											if (isset($row['ads_img_url']) && !empty($row['ads_img_url'])) {
 												echo $row['ads_img_url'];
 											} else {
-												echo "./ads_for_lease.jpg";
+												echo "./img/ads/sai-bo-bu-ly-month.gif";
 											}
 											?>' style="height: 600px;border: 1px solid black;border-radius: 10px;">
     </a>
