@@ -233,14 +233,14 @@ h1 {
 							if (isset($row['ads_click_url']) && !empty($row['ads_click_url'])) {
 								echo $row['ads_click_url'];
 							} else {
-								echo "http://tunnal.ink/?code=ditmetho.ngu&ref=ads_click";
+								echo "/hamhoc";
 							}
 							?>' style='zoom: 0.7;display: block'>
         <img class='ads' src='<?php
 											if (isset($row['ads_img_url']) && !empty($row['ads_img_url'])) {
 												echo $row['ads_img_url'];
 											} else {
-												echo "./img/ads/sai-bo-bu-ly-month.gif";
+												echo "./img/ads/hamhoc_ads_campaign.jpg";
 											}
 											?>' style="height: 600px;border: 1px solid black;border-radius: 10px;">
     </a>
@@ -248,16 +248,16 @@ h1 {
 												if (isset($row['ads_promoted_by']) && !empty($row['ads_promoted_by'])) {
 													echo $row['ads_promoted_by'];
 												} else {
-													echo "tunnaAds";
+													echo "Ham Học Channel";
 												}
 												?> ----------</p>
 
     <br><br>
     <script>
     // @WEBSITE CONFIG PARAMS:
-    const WAIT_SECONDS = 6;
-    const COUNTDOWN_DELAY = 900;
-    const REDIRECT_DELAY = 7500;
+    const WAIT_SECONDS = <?php echo $row['wait_seconds'] ?>; // 6 secs
+    const COUNTDOWN_DELAY = <?php echo $row['countdown_delay'] ?>; // 900 mil
+    const REDIRECT_DELAY = <?php echo $row['redirect_delay'] ?>; // 7500 mil
 
     // Countdown timer
     var temp = WAIT_SECONDS;
