@@ -189,8 +189,10 @@ h1 {
 		} else {
 			$size = "Unknown";
 		}
+      
+      	$user_agent = $_SERVER['HTTP_USER_AGENT'];
 
-		$sql = "INSERT INTO tracker (ref_code, platform, ref_url, ip_address, location, screen_size, browser, OS) VALUES ('$code', '$platform', '$ref_url', '$user_ip', '$location', '$size', '$browser', '$operating_system')";
+		$sql = "INSERT INTO tracker (ref_code, platform, ref_url, ip_address, location, screen_size, browser, OS, browser_user_agent) VALUES ('$code', '$platform', '$ref_url', '$user_ip', '$location', '$size', '$browser', '$operating_system', '$user_agent')";
 		// insert db
 		$conn->query($sql);
 
