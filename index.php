@@ -226,9 +226,16 @@ h1 {
 				$url = $row['next_url'];
 		?>
     <script>
-    document.title = "<?php echo $row['link_title']  ?> | Tunna™ Link Shortener PROVIP®";
+    document.title = "<?php 
+              if ($row['link_title'] !== "") {
+              echo "\"". $row['link_title'] . " | Tunna™ Link Shortener PROVIP®";
+                }
+      		else {
+             echo "Tunna™ Link Shortener PROVIP®";
+              }
+      ?>";
     </script>
-    <h1 id='wait'>Đợi chút xíu tầm <span id='sec'>6</span> giây thôi bạn nhé!!!<br>┗(^o^　)┓三</h1>
+    <h1 id='wait'>Đợi chút xíu tầm <span id='sec'>69</span> giây thôi bạn nhé!!!<br>┗(^o^　)┓三</h1>
     Đang chuyển hướng đến đường dẫn được chia sẻ... // Redirecting to content, please wait a second...<br><br>
 
     <a href='<?php
@@ -278,7 +285,8 @@ h1 {
 
     // Enough shits, let's redirect our customers with the desired link!
     setTimeout(function() {
-        window.location.replace("<?php echo $url ?>");
+       // window.location.replace("
+      window.location.href("<?php echo $url ?>");
     }, REDIRECT_DELAY);
     </script>
     <?php
@@ -293,6 +301,6 @@ h1 {
 		}
 	}
 	// @SITE FOOTER
-	echo "<hr>----WEBSITE INFO:----<br><br><h3 style='margin: 0;margin-top: 5px'>Tunna™ Link Shortener PROVIP®</h3><p style='margin: 0;'>Hệ thống rút gọn link chia sẻ bởi Dương Tùng Anh</p><br><img src='tunnaduong.png' style='width: 40px;margin: 10px 0 0 0;opacity: 0.5'><p style='opacity: 0.5'>(c) Tunna Duong 2022</p><br><br><br>Website hiện vẫn đang trong quá trình nâng cấp giao diện! Mọi ý kiến góp ý vui lòng điền vào biểu mẫu tại: <a href='https://tunnal.ink/DongGopYKien'>tunnal.ink/DongGopYKien</a><br><br>";
+	echo "<hr>---- WEBSITE INFO ----<br><br><h3 style='margin: 0;margin-top: 5px'>Tunna™ Link Shortener PROVIP®</h3><p style='margin: 0;'>Hệ thống rút gọn link chia sẻ bởi Dương Tùng Anh</p><br><img src='tunnaduong.png' style='width: 40px;margin: 10px 0 0 0;opacity: 0.5'><p style='opacity: 0.5'>(c) Tunna Duong 2022 - ". date("Y") ."</p><br><br><br>Website hiện vẫn đang trong quá trình nâng cấp giao diện! Mọi ý kiến góp ý vui lòng điền vào biểu mẫu tại: <a href='https://tunnal.ink/DongGopYKien'>tunnal.ink/DongGopYKien</a><br><br><sup>ver: 23.06.01.183h73N72HKP4444(a)</sup>";
 	?>
 </center>
