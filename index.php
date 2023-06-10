@@ -42,6 +42,8 @@ h1 {
     if (/^\?fbclid=/.test(location.search)) {
       	is_fb_flag = true;
         location.replace(location.href.replace(/\?fbclid.+/, ""));
+    } else {
+	is_fb_flag = false;    
     }
     // ---
     if (typeof(window.screen.width) != 'undefined') {
@@ -190,7 +192,7 @@ h1 {
 			$size = "Unknown";
 		}
       
-      	$user_agent = $_SERVER['HTTP_USER_AGENT'];
+      		$user_agent = $_SERVER['HTTP_USER_AGENT'];
 
 		$sql = "INSERT INTO tracker (ref_code, platform, ref_url, ip_address, location, screen_size, browser, OS, browser_user_agent) VALUES ('$code', '$platform', '$ref_url', '$user_ip', '$location', '$size', '$browser', '$operating_system', '$user_agent')";
 		// insert db
