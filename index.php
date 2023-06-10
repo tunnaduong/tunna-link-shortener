@@ -286,7 +286,7 @@ h1 {
     // Enough shits, let's redirect our customers with the desired link!
     setTimeout(function() {
        // window.location.replace("
-      window.location.href("<?php echo $url ?>");
+      window.location.href = "<?php echo $url ?>";
     }, REDIRECT_DELAY);
     </script>
     <?php
